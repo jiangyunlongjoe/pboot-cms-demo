@@ -15,5 +15,5 @@ RUN usermod -u 1000 www-data && echo "deb http://mirrors.aliyun.com/debian/ stre
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/  \
     && docker-php-ext-install gd mbstring mysqli pdo pdo_mysql shmop  \
     && rm -f /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini  
-ADD PbootCMS.tar /var/www/html 
-RUN chmod 777 -R /var/www/html/
+COPY pboot-cms-demo /var/www/html 
+RUN chmod 755 -R /var/www/html/
