@@ -10,7 +10,7 @@ RUN usermod -u 1000 www-data && sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' 
        --with-jpeg=/usr/include \
        --with-freetype=/usr/include/freetype2/ \
     && docker-php-ext-install gd mbstring mysqli pdo pdo_mysql shmop  \
-    && rm -f /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini  
-COPY pboot-cms-demo   /var/www/html 
-#COPY info.php     /var/www/html/
-RUN chmod 755 -R /var/www/html/
+    && rm -f /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini 
+COPY ./PbootCMS-3.0.3  /var/www/html 
+#COPY ./info.php  /var/www/html 
+RUN chmod 777 -R /var/www/html/

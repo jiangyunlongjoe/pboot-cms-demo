@@ -5,7 +5,7 @@ docker build -t pbootcms:0.1 .
 
 2、通过docker测试运行
 
-docker run --name pboocms -d -p 80:80 pbootcms:0.1
+docker run --name pbootcms -d -p 80:80 pbootcms:0.1
 
 3、推送镜像到镜像仓库
 
